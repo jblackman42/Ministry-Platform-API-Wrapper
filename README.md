@@ -7,7 +7,7 @@ A robust and handy API Client for MinistryPlatformAPI.
 To use this package in your project:
 
 ```bash
-npm install ministryplatformapi --save
+npm i ministry-platform-api-wrapper
 ```
 
 ## Setup
@@ -51,7 +51,7 @@ Here are some examples to get you started:
 ### Creating a Web API Client
 
 ```javascript
-const MinistryPlatformAPI = require('ministryplatformapi');
+const MinistryPlatformAPI = require('ministry-platform-api-wrapper');
 
 const apiClient = await MinistryPlatformAPI.CreateWebApiClient();
 console.log("Web API Client created successfully");

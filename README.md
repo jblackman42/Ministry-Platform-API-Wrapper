@@ -53,35 +53,35 @@ Here are some examples to get you started:
 ```javascript
 const MinistryPlatformAPI = require('ministry-platform-api-wrapper');
 
-const apiClient = await MinistryPlatformAPI.CreateWebApiClient();
+await MinistryPlatformAPI.CreateWebApiClient();
 console.log("Web API Client created successfully");
 ```
 
 ### Getting Domain Data
 
 ```javascript
-const domain = await apiClient.request('get', '/domain', null, null);
+const domain = await MinistryPlatformAPI.request('get', '/domain', null, null);
 console.log(domain);
 ```
 
 ### Retrieving a User
 
 ```javascript
-const user = await apiClient.request('get', '/tables/dp_Users/1', {$select: "Display_Name"}, null);
+const user = await MinistryPlatformAPI.request('get', '/tables/dp_Users/1', {$select: "Display_Name"}, null);
 console.log(user);
 ```
 
 ### Fetching Groups
 
 ```javascript
-const groups = await apiClient.request('post', '/procs/api_MPP_GetMyGroups', null, {"@ContactID": 1});
+const groups = await MinistryPlatformAPI.request('post', '/procs/api_MPP_GetMyGroups', null, {"@ContactID": 1});
 console.log(groups);
 ```
 
 ### Updating Contact Information
 
 ```javascript
-const contact = await apiClient.request('put', '/tables/Contacts', null, [{"Contact_ID": 1, "Nickname": "Jon"}]);
+const contact = await MinistryPlatformAPI.request('put', '/tables/Contacts', null, [{"Contact_ID": 1, "Nickname": "Jon"}]);
 console.log(contact);
 ```
 

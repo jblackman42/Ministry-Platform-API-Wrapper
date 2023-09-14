@@ -108,6 +108,8 @@ const MinistryPlatformAPI = {
         error.response.data.status = error.response.status;
         throw new APIError("Failed to retrieve domain data from authenticated user. Make sure the Client User on your API Client has security roles. More information about API Client Permissions can be found here: https://kb.ministryplatform.com/kb/develop/giving-developers-access", error.response.data);
       });
+
+    return this.domain;
   },
   async request (method, path, query, body) {
     return await axios({
